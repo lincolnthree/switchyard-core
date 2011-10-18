@@ -17,15 +17,23 @@
       <groupId>org.jboss.forge</groupId>
       <artifactId>forge-shell-api</artifactId>
       <version>${version.forge}</version>
+	  <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.jboss.forge</groupId>
       <artifactId>forge-project-model-maven</artifactId>
       <version>${version.forge}</version>
+	  <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.switchyard</groupId>
       <artifactId>switchyard-config</artifactId>
+	  <exclusions>
+	  	<exclusion>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</exclusion>
+	  </exclusions>
     </dependency>
   </dependencies>
   <build>
